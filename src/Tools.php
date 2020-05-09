@@ -220,13 +220,11 @@ global $markdown_html;
                                 <?php echo $markdown_html ?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="markdown">
-                                <textarea rows="30" class="form-control">
-                                    <?php echo $markdown ?>
+                                <textarea rows="30" class="form-control"><?php echo $markdown ?>
                                 </textarea>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="html">
-                                <textarea rows="30" class="form-control">
-                                    <?php echo $markdown_html ?>
+                                <textarea rows="30" class="form-control"><?php echo $markdown_html ?>
                                 </textarea>
                             </div>
                         </div>

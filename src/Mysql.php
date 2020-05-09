@@ -13,7 +13,7 @@ class Mysql
 {
     public static function markdown($config)
     {
-        $markdown = null;
+        global $markdown;
         // 需要取出的字段
         $config['columns'] = ['Field', 'Type', 'Null', 'Key', 'Extra', 'Comment'];
         Tools::markdown_append('## 表', true);

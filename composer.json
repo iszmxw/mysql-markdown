@@ -1,0 +1,21 @@
+{
+  "name": "iszmxw/mysql-markdown",
+  "description": "mysql转markdown文档，只需要mysql连接参数",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "追梦小窝",
+      "email": "mail@54zm.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Iszmxw\\MysqlMarkdown\\": "src"
+    }
+  }
+}

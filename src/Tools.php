@@ -206,8 +206,8 @@ global $markdown_html;
                     <h2 class="panel-title">MySQL转换Markdown文档</h2>
                 </div>
                 <div class="panel-body">
-                    <a href="#" onclick="location.reload(true)" class="btn btn-default">重新生成</a>
-                    <h3>Markdown 结果</h3>
+                    <a href="#" onclick="location.reload(true)" class="btn btn-default">刷新文档</a>
+                    <h3>Markdown 和 Html 结果</h3>
                     <div id="tabs" role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#html_preview" role="tab" data-toggle="tab">HTML预览</a>

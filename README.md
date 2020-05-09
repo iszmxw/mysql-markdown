@@ -6,9 +6,16 @@ Mysql通过PHP脚本快速生成数据库文档，避免每次手动维护文档
 
 > 将该脚本放到服务器中，然后通过域名或者IP进行访问即可看到效果
 
-![效果图](/static/QQ截图20190930150558.png)
-![效果图](/static/QQ截图20190930150659.png)
+![效果图](/static/1.png)
+![效果图](/static/2.png)
+![效果图](/static/3.png)
 
+
+** 安装 **
+```shell script
+# 安装依赖
+composer require iszmxw/mysql-markdown
+```
 
 ## 测试
 
@@ -33,9 +40,4 @@ $config['columns'] = [
     'Comment',
 ];
 Mysql::markdown($config);
-```
-
-```shell script
-# 安装依赖
-composer install
 ```

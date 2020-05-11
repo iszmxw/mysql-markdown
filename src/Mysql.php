@@ -18,14 +18,14 @@ class Mysql
         $config['columns'] = ['Field', 'Type', 'Null', 'Key', 'Extra', 'Comment'];
         Tools::markdown_append('## 表', true);
         try {
-            $dbms    = $config['dbs'] ? $config['dbs'] : 'mysql';        //数据库类型
-            $host    = $config['host'];                                  //数据库主机名
-            $port    = $config['port'] ? $config['port'] : 3306;         //端口
-            $charset = $config['charset'] ? $config['charset'] : 'utf8'; //字符类型
-            $dbName  = $config['name'];                                  //使用的数据库
-            $user    = $config['user'];                                  //数据库连接用户名
-            $pass    = $config['password'];                              //对应的密码
-            $dsn     = "$dbms:host=$host;port=$port;dbname=$dbName;charset=$charset";
+            $dbms    = isset($config['dbs']) ? $config['dbs'] : 'mysql';        //  数据库类型
+            $host    = $config['host'];                                         //  数据库主机名
+            $port    = isset($config['port']) ? $config['port'] : 3306;         //  端口
+            $charset = isset($config['charset']) ? $config['charset'] : 'utf8'; //  字符类型
+            $dbName  = $config['name'];                                         //  使用的数据库
+            $user    = $config['user'];                                         //  数据库连接用户名
+            $pass    = $config['password'];                                     //  对应的密码
+            $dsn     = "$dbms:host=$host;port=$port;dbname=$dbName;charset=$charset";   //  拼接起来
             $DB      = new \PDO($dsn, $user, $pass);
             $table   = $config['name'];
             $query   = $DB->prepare('SELECT table_name, table_comment FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = :table');

@@ -182,11 +182,25 @@ global $markdown_html;
 ?><!DOCTYPE html>
 <html>
 <head>
-    <title>MySQL Markdown</title>
+    <title>MySQL Markdown文档</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .top {
+            display: block;
+            position: fixed;
+            width: 50px;
+            background: #ccc;
+            bottom: 100px;
+            right: 100px;
+            color: #3e302f;
+            font-size: 14px;
+            line-height: 25px;
+            padding: 10px;
+        }
+    </style>
     <script>
         $(document).ready(function () {
             $('#tabs a').click(function (e) {
@@ -233,6 +247,7 @@ global $markdown_html;
             </div>
         </div>
     </div>
+    <a href="#" class="top"></a>
 </div>
 </body>
 </html>

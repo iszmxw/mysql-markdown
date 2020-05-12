@@ -247,7 +247,7 @@ global $markdown_html;
             </div>
         </div>
     </div>
-    <a href="#" class="top"></a>
+    <a href="#" class="top">返回顶部</a>
 </div>
 </body>
 </html>

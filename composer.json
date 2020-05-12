@@ -1,7 +1,16 @@
 {
   "name": "iszmxw/mysql-markdown",
-  "description": "mysql转markdown文档，只需要mysql连接参数",
+  "keywords": [
+    "mysql",
+    "markdown",
+    "mysql markdown",
+    "mysql文档",
+    "mysql文档生成",
+    "mysql转markdown"
+  ],
+  "description": "mysql生成文档，转markdown文档，只需要mysql连接参数",
   "type": "library",
+  "homepage": "http://blog.54zm.com/",
   "license": "MIT",
   "authors": [
     {
@@ -9,9 +18,13 @@
       "email": "mail@54zm.com"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
     "php": ">=7.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "master"
+    }
   },
   "autoload": {
     "psr-4": {

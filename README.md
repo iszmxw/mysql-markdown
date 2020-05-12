@@ -15,7 +15,7 @@ Mysql通过PHP脚本快速生成数据库文档，避免每次手动维护文档
 **安装**
 
 ```shell script
-# 安装依赖
+# 安装
 composer require iszmxw/mysql-markdown
 ```
 ---

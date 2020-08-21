@@ -125,9 +125,6 @@ public static function markdown_format_table_markdown($data)
     foreach ($data as $result) {
         self::markdown_append('|');
         foreach ($result as $column_name => $column_data) {
-            if ($config['reverse_null'][0] == 1 && $column_name == "Required") {
-                $column_data = $column_data == "N" ? "Y" : "N";
-            }
             self::markdown_append($column_data . '|');
         }
         self::markdown_append('', true);
@@ -183,10 +180,10 @@ global $markdown_html;
 <html>
 <head>
     <title>MySQL Markdown文档</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-theme.min.css">
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
     <style>
         .top {
             display: block;

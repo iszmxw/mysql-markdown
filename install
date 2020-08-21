@@ -1,0 +1,63 @@
+<?php
+
+// 获取目录下所有文件
+function get_all_files($path, &$files)
+{
+    if (is_dir($path)) {
+        $dp = dir($path);
+        while ($file = $dp->read()) {
+            if ($file != "." && $file != "..") {
+                get_all_files($path . "/" . $file, $files);
+            }
+        }
+        $dp->close();
+    }
+    if (is_file($path)) {
+        $files[] = $path;
+    }
+}
+function get_file_names_dir($dir)
+{
+    $files = array();
+    get_all_files($dir, $files);
+    return $files;
+}
+$filenames = get_file_names_dir("public");
+
+
+
+foreach ($filenames as $value) {
+    $arr        = explode('/', $value);
+    $filename   = end($arr);
+    $floder     = rtrim($value, $filename);
+    $new_folder = str_replace('public', 'iszmxw', $floder);
+    mkdirs(trim($new_folder, '/'));
+    if (is_dir($new_folder)) {
+        $res      = CopyFile($value, $new_folder . $filename, "");
+        $result[] = $res;
+    }
+}
+array_map("result", $result);
+
+
+// 创建文件夹以及子目录
+function mkdirs($dir)
+{
+    return is_dir($dir) or (mkdirs(dirname($dir)) and mkdir($dir, 0777));
+}
+
+// 复制文件
+function CopyFile($sourcefile, $dir, $filename)
+{
+    if (!file_exists($sourcefile)) {
+        return false;
+    }
+    return copy($sourcefile, $dir . '' . $filename);
+}
+
+function result($val)
+{
+    if (true === $val) {
+        echo "success\r\n";
+    }
+}

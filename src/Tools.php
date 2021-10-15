@@ -180,10 +180,10 @@ global $markdown_html;
 <html>
 <head>
     <title>MySQL Markdown文档</title>
-    <link rel="stylesheet" href="./public/mysql-markdown/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/mysql-markdown/css/bootstrap-theme.min.css">
-    <script src="./public/mysql-markdown/js/jquery.min.js"></script>
-    <script src="./public/mysql-markdown/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <style>
         .top {
             display: block;
